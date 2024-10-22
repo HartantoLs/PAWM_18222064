@@ -363,7 +363,7 @@ footer p{
 
     .nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
     }
 
     .feature .playButton{

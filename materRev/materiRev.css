@@ -336,6 +336,15 @@ footer {
     .container h2 {
         font-size: 1.1em;
     }
+    .daftarMateri{
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
 
     .box {
         padding: 5px;
