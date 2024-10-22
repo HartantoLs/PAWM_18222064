@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #1F2933;
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #00ADB5;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: #222831;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul a {
+    color: #222831;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header ul a:hover {
+    color: white;
+    transition: color 0.3s ease;
+    opacity: 0.8;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    max-height: 1000px;
+    flex-grow: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 150px;
+    padding: 30px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.container h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #222831;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    letter-spacing: 25px;
+    line-height: 60px;
+    text-align: center;
+    animation: wave 5s infinite ease-in-out;
+    animation-delay: calc(0.5s * var(--i));
+}
+
+.isi {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    gap: 40px;
+}
+
+.materi {
+    border-radius: 200px;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.materi:hover {
+    opacity: 1;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
+}
+
+.materi svg {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.deskripsi .tit {
+    padding: 10px;
+    padding-bottom: 0px;
+    color: #222831;
+    text-decoration: none;
+    justify-content: start;
+    text-align: end;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222831;
+    margin-bottom: 0px;
+}
+
+.deskripsi p {
+    margin-top: 0px;
+    padding-top: 0px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #222831;
+    text-decoration: none;
+    text-align: start;
+    color: #222831;
+}
+
+.deskripsi .read {
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    color: #222831;
+    text-decoration: none;
+    justify-content: start;
+    text-align: end;
+    font-size: 15px;
+    border-radius: 100px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px;
+    background-color: #00ADB5;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.deskripsi .read:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.glbSvg {
+    animation: moveNortheast 3s infinite alternate ease-in-out;
+}
+
+.circularSvg {
+    animation: rotate 3s linear infinite;
+}
+
+.curveSvg {
+    position: relative;
+    animation: parabolicMotion 4s infinite alternate ease-in-out;
+}
+
+footer {
+    background-color: #00ADB5;
+    height: auto;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0;
+    color: #222831;
+}
+
+/* Animasi */
+@keyframes parabolicMotion {
+    0% {
+        transform: translate(0, 0); /* Titik awal (0,0) */
+    }
+    25% {
+        transform: translate(10px, -30px); /* Mencapai puncak parabola */
+    }
+    50% {
+        transform: translate(20px, 0); /* Kembali ke sumbu x */
+    }
+    75% {
+        transform: translate(30px, -35px); /* Naik lagi ke arah puncak */
+    }
+    100% {
+        transform: translate(40px, 0); /* Kembali ke sumbu x */
+    }
+}
+
+@keyframes moveNortheast {
+    0% {
+        transform: translate(0, 0); 
+    }
+    100% {
+        transform: translate(30px, -30px); 
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveBackAndForth {
+    0% {
+        transform: translateX(0); /* Awal posisi */
+    }
+    50% {
+        transform: translateX(100px); /* Bergerak maju sejauh 100px */
+    }
+    100% {
+        transform: translateX(0); /* Kembali ke posisi semula */
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: #111; 
+    }
+    50% {
+        fill: #00ADB5;
+    }
+    100% {
+        fill: #111; 
+    }
+}
+
+@keyframes pour {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes scaleUpDown {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        width: 90%; 
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 3em; 
+        letter-spacing: 15px;
+    }
+
+    .isi {
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; 
+        max-width: 700px; 
+        margin: 20px auto; 
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em; 
+        letter-spacing: 8px;
+    }
+
+    .container h2{
+        font-size: 20px;
+        width: 180px;
+    }
+
+    .isi .tit{
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .isi {
+        grid-template-rows: 1fr;
+        gap: 15px;
+        width: 550px;
+    }
+
+    .materi {
+        margin-left: 20px;
+        padding: 10px;
+        border-radius: 100px;
+    }
+}
+
+@media (max-width: 540px) {
+    header h1 {
+        font-size: 1.8em; 
+        letter-spacing: 3px;
+    }
+
+    .isi {
+        grid-template-rows: 1fr;
+        gap: 10px;
+        width: 400px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .materi {
+        border-radius: 50px;
+        padding: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
