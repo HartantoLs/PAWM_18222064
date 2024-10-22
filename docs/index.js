@@ -17,3 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, index * 200);
     });
 });
+
+document.getElementById("playButton").onclick = function() {
+    window.location.href = "../materiRev/materiRev.html"; // Ganti dengan nama file HTML yang diinginkan
+};
