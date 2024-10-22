@@ -19,5 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById("playButton").onclick = function() {
-    window.location.href = "../materiRev/materiRev.html"; // Ganti dengan nama file HTML yang diinginkan
+    alert("Button clicked!");
+    window.location.href = "../materiRev/materiRev.html"; 
 };
+
