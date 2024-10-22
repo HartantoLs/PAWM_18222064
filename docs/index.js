@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById("playButton").onclick = function() {
     alert("Button clicked!");
-    window.location.href = "../materiRev/materiRev.html"; 
+    window.location.href = "https://www.google.com";
+
 };
 
