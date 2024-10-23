@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById("playButton").onclick = function() {
-    alert("LOL");
+    alert("LOLul");
     window.location.href = "../materiRev/materiRev.html";
     ; 
 };
