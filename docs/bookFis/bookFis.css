@@ -120,7 +120,7 @@ header ul a:hover {
 .isi {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 20px;
+    padding: 40px;
     width: 100%;
     height: auto;
     gap: 80px;
