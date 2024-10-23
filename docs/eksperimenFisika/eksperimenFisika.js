@@ -17,6 +17,27 @@ let carPosition = 0;
 let gameSound = new Audio("../audio/soundTrack.mp3");;
 let audioPlay = false;
 
+const popupButton = document.getElementById('guideButton');
+const popup = document.getElementById('popup');
+const closeButton = document.querySelector('.close-button');
+
+popupButton.addEventListener('click', () => {
+    popup.style.display = 'block';
+});
+
+
+closeButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+
+window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+        popup.style.display = 'none';
+    }
+});
+
+
 function showCustomAlert(message) {
     const customAlert = document.getElementById('custom-alert');
     const alertMessage = document.getElementById('custom-alert-message');
@@ -32,6 +53,7 @@ document.getElementById('custom-alert').addEventListener('click', function() {
         customAlert.classList.add('hidden');
     }, 400); // Wait for the fade-out transition to complete
 });
+
 
 function showFalseAlert(message) {
     const falseAlert = document.getElementById('false-alert');
@@ -147,12 +169,9 @@ function resetGame(){
     finishPosition = 0;
     objectStartPosition = 0;
     document.getElementById('goalDistance').textContent = "Distant to Goal";
-    const allAudioElements = document.querySelectorAll('audio');
-    allAudioElements.forEach(audio => {
-        audio.pause();
-        audio.currentTime = 0; // Reset audio to the beginning
-    });
+    stopMusic();
 }
+
 
 function check()
 {
@@ -179,12 +198,17 @@ function check()
         document.getElementById('goalDistance').textContent = "You are " + distance + " px away from the goal.";
         if(distance == 0){
             showWinnerAlert("CONGRATS , YOU'VE WON THE GAME");
-            
+            let winSound = new Audio("../audio/win.mp3");
+            winSound.play()
+            gameSound.pause();
+            audioPlay = false;
         }
     
         else if(distance < 0)
         {
             showFalseAlert("YOU'VE PASS THE LINE , GAME OVER");
+            let wrongSound = new Audio("../audio/wrong.mp3")
+            wrongSound.play();
         }
 
         else if(distance < -10)
@@ -193,6 +217,15 @@ function check()
             resetGame();
         }
     }
+}
+
+function stopMusic(){
+    const allAudioElements = document.querySelectorAll('audio');
+    allAudioElements.forEach(audio => {
+        gameSound.pause();
+        gameSound.currentTime = 0; // Reset audio to the beginning
+        audioPlay = false;
+    });
 }
 
 function move(distance, time) {

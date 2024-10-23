@@ -6,7 +6,7 @@
 
 body {
     /* background-color: #222831;    */
-    background: linear-gradient(to bottom right, #111, #222831, #393e46);
+    background: linear-gradient(to bottom right, black, #111, #222831, #393e46);
     border: 0;
     padding: 0;
     display: flex;
@@ -86,11 +86,11 @@ header ul a:hover {
     display: flex;
     align-items: center;
     /* background-color: transparent; */
-    background: linear-gradient(to bottom right, #222831, #393e46);
+    background: linear-gradient(to bottom right,#222831, #393e46);
     width: 90%;
     max-width: 1000px;
     height: auto;
-    max-height: 1000px;
+    max-height: 800px;
     flex-grow: 1;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -309,23 +309,24 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .nav ul {
-        flex-direction: column;
-        gap: 10px;
+    body{
+        width: 100%;
     }
-
-    .container {
-        width: 90%; 
-        height: auto;
+    header{
+        width: 600px;
     }
-
     header h1 {
-        font-size: 3em; 
-        letter-spacing: 15px;
+        font-size: 2em;
+    }
+    .container {
+        width: 80%; 
+        max-width: 800px;
+        /* height: 300px; */
+        
     }
 
-    .isi {
-        grid-template-rows: 1fr 1fr;
+    .deskripsi .read{
+        background-color: #111;
     }
 }
 
@@ -335,6 +336,7 @@ footer {
         max-width: 700px; 
         margin: 20px auto; 
         padding: 15px;
+        background-color: blue;
     }
 
     header h1 {
@@ -355,7 +357,7 @@ footer {
     .isi {
         grid-template-rows: 1fr;
         gap: 15px;
-        width: 550px;
+        width: 100px;
     }
 
     .materi {
@@ -386,6 +388,36 @@ footer {
         padding: 10px;
     }
 
+    .nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    
+    header h1 {
+        font-size: 1.8em; 
+        letter-spacing: 3px;
+    }
+
+    .isi {
+        grid-template-rows: 1fr;
+        gap: 10px;
+        width: 400px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .materi {
+        border-radius: 50px;
+        padding: 10px;
+    }
+    .read{
+        margin-bottom: 20px;
+    }
     .nav ul {
         flex-direction: column;
         gap: 5px;

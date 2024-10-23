@@ -350,20 +350,31 @@ footer p{
 
 /* Media Queries untuk Responsivitas */
 @media (max-width: 1024px) {
+
+    .container h2{
+        font-size: 20px;
+    }
+
+    #contP{
+        font-size: 10px;
+    }
+
     .homeFeature {
         grid-template-columns: 1fr;
     }
 
     .container {
-        width: 90%; 
+        width: 60%; 
     }
-
+    header{
+        width: 600px;
+    }
     header h1 {
         font-size: 3em; 
     }
 
     .nav ul {
-        flex-direction: column;
+        
         gap: 5px;
     }
 
@@ -376,7 +387,9 @@ footer p{
     .home{
         text-align: center;
     }
-
+    header{
+        width: 600px;
+    }
     .container {
         margin-top: 100px;
         width: 70%; 
@@ -391,8 +404,14 @@ footer p{
     }
     .container h2{
         margin-top: 100px;
-        font-size: 1.5em;
+        font-size: 15px;
+
     }
+
+    #p1{
+        font-size: 10px;
+    }
+
     .feature h3 {
         font-size: 1.5em; 
     }
@@ -405,17 +424,24 @@ footer p{
         font-size: 1em; 
         padding: 8px 15%;
     }
+
+    footer{
+        text-align: center;
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 480px) {
     .home{
         text-align: center;
+        
     }
     
     header h1 {
         font-size: 2.5em; 
     }
 
+    
     .feature {
         padding: 15px;
         text-align: justify;
@@ -437,5 +463,9 @@ footer p{
     .feature button {
         font-size: 0.9em; 
         padding: 6px 10%;
+    }
+
+    footer{
+        font-size: 15px;
     }
 }
