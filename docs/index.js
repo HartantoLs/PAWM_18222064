@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById("playButton").onclick = function() {
-    alert("LOLul");
+    alert("Pindah Page");
     window.location.href = "./materiRev/materiRev.html";
     ; 
 };
