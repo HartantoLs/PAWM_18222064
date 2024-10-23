@@ -141,6 +141,7 @@ header ul a:hover {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     /* background-color: #393e46; */
+    
     border-radius: 100px;
     padding: 50px;
 }
@@ -152,7 +153,7 @@ header ul a:hover {
 .feature {
     padding: 30px;
     border-radius: 15%;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(215,215,215, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,7 +171,7 @@ header ul a:hover {
 .feature:hover {
     opacity: 0.9;
     transform: translateY(-13px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(215,215,215, 0.4);
 }
 
 .feature i {

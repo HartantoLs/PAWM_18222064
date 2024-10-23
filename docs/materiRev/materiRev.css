@@ -6,6 +6,7 @@
 
 body {
     background-color: aliceblue;
+    background: linear-gradient(to bottom, white, aliceblue, #F5F7F8 , #393e46);
     border: 0;
     padding: 0;
     display: flex;

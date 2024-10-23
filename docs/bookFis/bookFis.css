@@ -5,6 +5,7 @@
 }
 
 body {
+    /* background-color: #222831;    */
     background: linear-gradient(to bottom right, #111, #222831, #393e46);
     border: 0;
     padding: 0;
@@ -84,7 +85,8 @@ header ul a:hover {
 .container {
     display: flex;
     align-items: center;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background: linear-gradient(to bottom right, #222831, #393e46);
     width: 90%;
     max-width: 1000px;
     height: auto;
@@ -96,6 +98,12 @@ header ul a:hover {
     border-radius: 150px;
     padding: 30px;
     animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(255,255,255, 0.4);
 }
 
 .container h2 {
@@ -216,16 +224,10 @@ footer {
 /* Animasi */
 @keyframes parabolicMotion {
     0% {
-        transform: translate(0, 0); /* Titik awal (0,0) */
-    }
-    25% {
-        transform: translate(10px, -30px); /* Mencapai puncak parabola */
+        transform: translate(-10px, 10px); /* Titik awal (0,0) */
     }
     50% {
-        transform: translate(20px, 0); /* Kembali ke sumbu x */
-    }
-    75% {
-        transform: translate(30px, -35px); /* Naik lagi ke arah puncak */
+        transform: translate(20px, -40px); /* Kembali ke sumbu x */
     }
     100% {
         transform: translate(40px, 0); /* Kembali ke sumbu x */
