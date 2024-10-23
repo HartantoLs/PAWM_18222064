@@ -19,8 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById("playButton").onclick = function() {
-    alert("Button clicked!");
-    window.location.href = "https://www.google.com";
-
+    window.location.href = "../materiRev/materiRev.html"; 
 };
-
