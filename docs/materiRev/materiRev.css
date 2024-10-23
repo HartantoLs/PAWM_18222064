@@ -6,7 +6,7 @@
 
 body {
     background-color: aliceblue;
-    background: linear-gradient(to bottom, white, aliceblue, #F5F7F8 , #393e46);
+    background: linear-gradient(to bottom, white,  whitesmoke, aliceblue, #7F8487);
     border: 0;
     padding: 0;
     display: flex;
@@ -129,7 +129,8 @@ header ul a:hover {
 }
 
 .box{
-    background-color: #393e46;
+    background: linear-gradient(to bottom, #7F8487, #393e46, #222831
+    );
     opacity: 0.8;
     display: flex;
     flex-direction: column;
