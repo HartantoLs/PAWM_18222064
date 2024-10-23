@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById("playButton").onclick = function() {
     alert("LOL");
-    window.location.href = "https://hartantols.github.io/PAWM_18222064/materiRev/materiRev.html";
+    window.location.href = "../materiRev/materiRev.html";
     ; 
 };
