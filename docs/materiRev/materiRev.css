@@ -7,6 +7,11 @@
 body {
     background-color: aliceblue;
     background: linear-gradient(to bottom, white,  whitesmoke, aliceblue, #7F8487);
+    background-image: url(../image/p.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fadeSlide 3s ease-in-out;
     border: 0;
     padding: 0;
     display: flex;
@@ -14,7 +19,16 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
+@keyframes fadeSlide {
+    from {
+        background-position: top center;
+        opacity: 0;
+    }
+    to {
+        background-position: center;
+        opacity: 1;
+    }
+}
 #titleHead{
     background-color: transparent;
     width: 100%;
@@ -129,8 +143,7 @@ header ul a:hover {
 }
 
 .box{
-    background: linear-gradient(to bottom, #7F8487, #393e46, #222831
-    );
+    background: linear-gradient(to bottom, #7F8487, #393e46, #222831, #111);
     opacity: 0.8;
     display: flex;
     flex-direction: column;

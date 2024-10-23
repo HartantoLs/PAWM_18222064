@@ -6,16 +6,28 @@
 
 body {
     /* background-color: #222831;    */
-    background: linear-gradient(to bottom right, black, #111, #222831, #393e46);
+    
     border: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    background: linear-gradient(to bottom right, black, #111, #222831, #393e46);
+    background-image: url(../image/luxuBlack.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
 }
-
-
+/* 
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+} */
 #titleHead{
     background-color: transparent;
     width: 100%;
@@ -85,8 +97,8 @@ header ul a:hover {
 .container {
     display: flex;
     align-items: center;
-    /* background-color: transparent; */
-    background: linear-gradient(to bottom right,#222831, #393e46);
+    background-color: transparent;
+    /* background: linear-gradient(to bottom right,#222831, #393e46); */
     width: 90%;
     max-width: 1000px;
     height: auto;
@@ -139,7 +151,7 @@ header ul a:hover {
 
 .materi:hover {
     opacity: 1;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(251,251,251, 0.4);
     transform: translateY(-10px);
 }
 
@@ -336,7 +348,6 @@ footer {
         max-width: 700px; 
         margin: 20px auto; 
         padding: 15px;
-        background-color: blue;
     }
 
     header h1 {
