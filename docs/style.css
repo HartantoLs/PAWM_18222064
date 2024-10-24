@@ -105,7 +105,12 @@ p {
     margin-top: 10px;
 }
 
-
+.container h2{
+    animation:fadeInDown 1.5s ease-in-out;;
+}
+.container p{
+    animation: fadeInUp 2s ease-in-out;
+}
 h1 {
 
     animation: fadeInDown 1.5s ease-in-out;
