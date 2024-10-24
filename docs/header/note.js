@@ -1,27 +1,22 @@
 const canvas = document.getElementById('drawingCanvas');
         const ctx = canvas.getContext('2d');
         let painting = false;
-
-        // Adjust canvas size to the container
+        
         function adjustCanvasSize() {
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
         }
         adjustCanvasSize();
 
-        // Start drawing
         function startDrawing(e) {
             painting = true;
             draw(e);
         }
-
-        // End drawing
         function endDrawing() {
             painting = false;
             ctx.beginPath();
         }
 
-        // Draw function
         function draw(e) {
             if (!painting) return;
 
@@ -39,12 +34,13 @@ const canvas = document.getElementById('drawingCanvas');
             ctx.moveTo(x, y);
         }
 
-        // Add event listeners for drawing
         canvas.addEventListener('mousedown', startDrawing);
         canvas.addEventListener('mouseup', endDrawing);
         canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('touchstart', startDrawing);
+        canvas.addEventListener('touchend', endDrawing);
+        canvas.addEventListener('touchmove', draw);
 
-        // Handle drag events for trash and save buttons
         document.getElementById('trashButton').addEventListener('dragstart', (e) => {
             e.dataTransfer.setData('action', 'reset');
         });
@@ -52,7 +48,6 @@ const canvas = document.getElementById('drawingCanvas');
             e.dataTransfer.setData('action', 'save');
         });
 
-        // Handle drop events on the canvas
         canvas.addEventListener('dragover', (e) => {
             e.preventDefault();
         });
