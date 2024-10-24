@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    max-height: 200vh;
 }
 @keyframes fadeSlide {
     from {
@@ -27,6 +28,34 @@ body {
     to {
         background-position: center;
         opacity: 1;
+    }
+}
+
+h1 {
+
+    animation: fadeInDown 1.5s ease-in-out;
+}
+header{
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 #titleHead{
@@ -100,6 +129,7 @@ header ul a:hover {
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
     flex: 1;
+    max-height:750px;
 }
 
 
@@ -143,8 +173,9 @@ header ul a:hover {
 }
 
 .box{
-    background: linear-gradient(to bottom, #7F8487, #393e46, #222831, #111);
-    opacity: 0.8;
+    /* background: linear-gradient(to bottom, #393e46, #222831, black); */
+    border: #222831, solid, 2px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,29 +196,30 @@ header ul a:hover {
 .box h3{
     margin-top: 10px;
     margin-bottom: 5px;
-    color: whitesmoke;
+    color: #222831;
     font-weight: bold;
-    font-size: 27px;
+    font-size: 22px;
 }
 
 .box p{
     margin-bottom: 20px;
-    color: whitesmoke;
+    color: #222831;
     font-weight: 500;
 }
 
 .box button{
     margin-bottom: 20px;
     width: 80px;
-    border: none;
+    border: #00ADB5 solid 2px;
     padding: 15px;
-    background-color: white;
+    background-color: #222831;
+    background: radial-gradient(white,aliceblue,#7F8487, rgb(0, 173, 181));
     border-radius: 45%;
     font-size: 15px;
     color: #222831;
     font-weight: 600;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    opacity: 0.5;
+    box-shadow: 0 8px 30px rgba(0, 173, 181, 0.4);
+    opacity: 0.8;
 }
 
 .fluida .f{
@@ -205,7 +237,7 @@ header ul a:hover {
 .box button:hover{
     opacity: 1;
     transform: scale(1.1)rotate(10deg);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 173, 181, 0.7);
 }
 
 .box svg{
@@ -235,10 +267,15 @@ footer {
     margin-top: 100px;
 }
 
-@media (max-width: 1200px) {
+footer h2{
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
     body{
         width: 100%;
-        background-color: aliceblue;
+        /* border-color:#00ADB5; */
+        /* background-color: #00ADB5; */
     }
     header h1 {
         font-size: 2em;
@@ -253,7 +290,6 @@ footer {
 
     .container h2 {
         font-size: 1.5em;
-        color: #222831;
     }
 
     .box {

@@ -91,6 +91,48 @@ header ul a:hover {
     gap: 30px;
 }
 
+h1 {
+    animation: fadeInDown 1.5s ease-in-out;
+    font-size: 2.5em;
+    color: #00ADB5;
+    margin-top: 20px;
+}
+
+p {
+    animation: fadeInUp 1.5s ease-in-out;
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+
+h1 {
+
+    animation: fadeInDown 1.5s ease-in-out;
+}
+header{
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .container {
     align-items: center;
     background-color: #393e46;

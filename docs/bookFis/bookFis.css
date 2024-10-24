@@ -13,9 +13,11 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom right, black, #111, #222831, #393e46);
-    background-image: url(../image/luxuBlack.jpg);
-    background-repeat: no-repeat; 
+    background: radial-gradient( #393e46, #222831, #111, black );
+    /* background: linear-gradient(to bottom right, #393e46, #222831, #111, black ); */
+    background-image: url(../image/luxuBlack.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 /* 
@@ -98,7 +100,7 @@ header ul a:hover {
     display: flex;
     align-items: center;
     background-color: transparent;
-    /* background: linear-gradient(to bottom right,#222831, #393e46); */
+    /* background: linear-gradient(to bottom right,#222831, #393e46);    */
     width: 90%;
     max-width: 1000px;
     height: auto;
@@ -106,17 +108,14 @@ header ul a:hover {
     flex-grow: 1;
     margin-top: 50px;
     margin-bottom: 50px;
-    box-shadow: 0 8px 30px rgba(255,255,255, 0.2);
+    box-shadow: 0 8px 30px rgba(255,255,255, 0.5);
     border-radius: 150px;
     padding: 30px;
     animation: fadeIn 1.5s ease-in-out;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.container:hover{
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(255,255,255, 0.4);
-}
+
 
 .container h2 {
     font-size: 25px;
@@ -140,9 +139,11 @@ header ul a:hover {
 
 .materi {
     border-radius: 100px;
-    background: linear-gradient(to bottom right, #B7B7B7 ,white);;
+    /* background: linear-gradient(to bottom right,white, aliceblue,#E4E0E1); */
+    background-color: transparent;
     display: flex;
-    box-shadow: 0 8px 30px rgba(255,255,255, 0.2);
+    box-shadow: 0 8px 30px rgba(255,255,255, 0.5);
+    height: 180px;
     justify-content: center;
     align-items: center;
     opacity: 0.5    ;
@@ -151,7 +152,7 @@ header ul a:hover {
 
 .materi:hover {
     opacity: 1;
-    box-shadow: 0 8px 30px rgba(251,251,251, 0.4);
+    box-shadow: 0 8px 30px rgba(251,251,251, 0.7);
     transform: translateY(-10px);
 }
 
@@ -159,18 +160,19 @@ header ul a:hover {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    fill: #ffffff;
 }
 
 .deskripsi .tit {
     padding: 10px;
     padding-bottom: 0px;
-    color: #222831;
+    color: white;
     text-decoration: none;
     justify-content: start;
     text-align: end;
     font-size: 20px;
     font-weight: 600;
-    color: #222831;
+    /* color: #222831; */
     margin-bottom: 0px;
 }
 
@@ -182,7 +184,7 @@ header ul a:hover {
     color: #222831;
     text-decoration: none;
     text-align: start;
-    color: #222831;
+    color: white;
 }
 
 .deskripsi .read {
@@ -231,6 +233,34 @@ footer {
     color: #393e46;
     margin-bottom: 50px;
     margin-top: 50px;
+}
+
+h1 {
+
+    animation: fadeInDown 1.5s ease-in-out;
+}
+header{
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Animasi */

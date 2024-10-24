@@ -7,7 +7,7 @@
 body {
     background: linear-gradient(to bottom right, black, #222831, #393e46, #222831, black);
     background: linear-gradient(to bottom, black, #222831);
-    background-image: url(../image/wow.jpg);
+    /* background-image: url(../image/luxuBlack.jpg);  */
     background-repeat: no-repeat; 
     background-position: center;
 ;    border: 0;
@@ -17,7 +17,33 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+h1 {
 
+    animation: fadeInDown 1.5s ease-in-out;
+}
+header{
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 #titleHead{
     background-color: transparent;
     width: 100%;

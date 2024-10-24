@@ -170,6 +170,9 @@ function resetGame(){
     objectStartPosition = 0;
     document.getElementById('goalDistance').textContent = "Distant to Goal";
     stopMusic();
+    document.getElementById('speedRes').textContent = "Speed";
+    document.getElementById('timeRes').textContent = "Time";
+    document.getElementById('distanceRes').textContent = "Distance";
 }
 
 
@@ -189,6 +192,9 @@ function check()
             showFalseAlert('Masukan waktu dari 1s sampai 20s');
             return;
         }
+        document.getElementById('speedRes').textContent = "Speed : " + speed + "px/s";
+        document.getElementById('timeRes').textContent = "Time : " + time + "s";
+        document.getElementById('distanceRes').textContent = "Distance : " + speed*time +"px";
         let distanceInput = speed*time;
         let currentLeft = parseInt(object.style.left, 10) || 0;
         let carPosition = currentLeft + distanceInput;
